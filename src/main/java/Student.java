@@ -1,4 +1,5 @@
 import java.time.LocalDate;
+import java.util.ArrayList;
 
 public class Student {
     private String name;
@@ -6,8 +7,8 @@ public class Student {
     private LocalDate DOB;
     private long ID;
     private String username;
-    private String modules;
-    private String courses;
+    private ArrayList<Module> modules = new ArrayList<Module>();
+    private ArrayList<Course> courses = new ArrayList<Course>();
 
     public Student(String name, int age, LocalDate DOB, long ID) {
         this.name = name;
@@ -26,16 +27,30 @@ public class Student {
         return username;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setName(String name) {this.name = name;}
+    public void setAge(int age) {this.age = age;}
+    public void setDOB(LocalDate DOB) {this.DOB = DOB; }
+    public void setID(long ID) {this.ID = ID;}
+    public void setUsername(String username) {
+        this.username = username;
     }
-    public void setAge(int age) {
-        this.age = age;
+
+    public void setModules(ArrayList<Module> modules) {
+        this.modules = modules;
     }
-    public void setDOB(LocalDate DOB) {
-        this.DOB = DOB;
+    public void addModules(Module module) {
+        modules.add(module);
     }
-    public void setID(long ID) {
-        this.ID = ID;
+    public void removeModules(Module module) {
+        modules.remove(module);
+    }
+    public void setCourses(ArrayList<Course> courses) {
+        this.courses = courses;
+    }
+    public void addCourses(Course course) {
+        courses.add(course);
+    }
+    public void removeCourses(Course course) {
+        courses.remove(course);
     }
 }
