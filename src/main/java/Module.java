@@ -2,25 +2,26 @@ import java.util.ArrayList;
 
 public class Module {
     private String modName;
-    private String ID;
+    private int ID;
     private ArrayList<Student> students = new ArrayList<Student>();
     private ArrayList<Course> courses = new ArrayList<Course>();
 
-    public Module(String modName, String ID) {
+    public Module(String modName, int ID) {
         this.modName = modName;
         this.ID = ID;
     }
 
     public String getModName() {return modName;}
-    public String getID() {return ID;}
-
-    public void setModName(String modName) {
-        this.modName = modName;
+    public int getID() {return ID;}
+    public ArrayList<Student> getStudents() {
+        return students;
+    }
+    public ArrayList<Course> getCourses() {
+        return courses;
     }
 
-    public void setID(String ID) {
-        this.ID = ID;
-    }
+    public void setModName(String modName) {this.modName = modName;}
+    public void setID(int ID) {this.ID = ID;}
 
     public void setStudents(ArrayList<Student> students) {
         this.students = students;
