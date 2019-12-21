@@ -47,7 +47,7 @@ class StudentTest {
 
         student.setUsername("Moey Jaloney29");
         String newUserName = student.getUsername();
-        Assert.assertEquals("TestShouldFailHere", newUserName);
+        Assert.assertEquals("MoeyJaloney29", newUserName);
     }
 
     @Test
